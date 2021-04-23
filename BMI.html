@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    body {
+      background: black;
+      animation: myfade 40s infinite;
+    }
+    @keyframes myfade {
+        0% {
+        background-color: #001F3F;
+        }
+        15% {
+        background-color: #FF4136;
+        }
+        30% {
+        background-color: orange;
+        }
+        45% {
+        background-color: blue;
+        }
+        50% {
+        background-color: green;
+        }
+        65% {
+        background-color: purple;
+        }
+        80% {
+        background-color: pink;
+        }
+        95% {
+        background-color: brown;
+        }
+        115% {
+        background-color: salmon;
+        }
+        130% {
+        background-color: aqua;
+        }
+    }
+      #main {
+        width: 330px;
+        height: 600px;
+        background-color: white;
+        margin-top: 60px;
+        margin-left: 8px;
+        border-radius: 20px;
+      }
+      h4 {
+        color: black;
+        font-family: 'poppins', sans-serif;
+        margin-top: -580px;
+        margin-left: 60px;
+        font-size: 30px;
+      }
+      #txt {
+        margin-left: 55px;
+        width: 230px;
+        height: 40px;
+        border-radius: 10px;
+        border: 3px solid white;
+        background: black;
+        outline: none;
+        text-align: center;
+        color: white;
+        font-weight: bolder;
+        transition: ease-in-out 1s;
+        font-family: 'poppins', sans-serif;
+      }
+      #txt:hover {
+        background-color: white;
+        color: black;
+        border: 3px solid black;
+        transition: ease-in-out 1s;
+        border-radius: 5px;
+      }
+      #txt:hover::placeholder {
+        color: black;
+        transition: ease-in-out 1s;
+      }
+      #txt::placeholder {
+        color: white;
+        font-weight: bolder;
+        text-align: center;
+      }
+      #num {
+      margin-left: 55px;
+      width: 230px;
+      height: 40px;
+      border-radius: 10px;
+      border: 3px solid white;
+      background: black;
+      outline: none;
+      text-align: center;
+      color: white;
+      font-weight: bolder;
+      transition: ease-in-out 1s;
+      font-family: 'poppins', sans-serif;
+      }
+      #num:hover {
+      background-color: white;
+      color: black;
+      border: 3px solid black;
+      transition: ease-in-out 1s;
+      border-radius: 5px;
+      }
+      #num:hover::placeholder {
+      color: black;
+      transition: ease-in-out 1s;
+      }
+      #num::placeholder {
+      color: white;
+      font-weight: bolder;
+      text-align: center;
+      }
+      #btn {
+      margin-left: 55px;
+      width: 235px;
+      height: 50px;
+      border-radius: 10px;
+      border: 3px solid white;
+      background: black;
+      outline: none;
+      text-align: center;
+      color: white;
+      font-weight: bolder;
+      font-size: 15px;
+      transition: ease 0.5s;
+      font-family: 'poppins', sans-serif;
+      }
+      #btn:hover {
+        background-color: white;
+        color: black;
+        border: 3px solid black;
+        transition: ease-in-out 0.5s;
+        border-radius: 5px;
+      }
+      #hr {
+        width: 331px;
+        height: 3px;
+        margin-left: -1px;
+        margin-left: 8px;
+        background-color: black;
+      }
+      
+      #demo {
+        margin-left: 55px;
+        width: 230px;
+        height: 40px;
+        border-radius: 10px;
+        border: 3px solid white;
+        background: black;
+        outline: none;
+        text-align: center;
+        font-weight: bolder;
+        color: white;
+        transition: ease 1s;
+        font-family: 'poppins', sans-serif;
+      }
+      #demo::placeholder {
+        color: white;
+        text-align: center;
+        transition: ease 1s;
+      }
+      #teens {
+      margin-left: 55px;
+      width: 230px;
+      height: 40px;
+      border-radius: 10px;
+      border: 3px solid white;
+      font-weight: bolder;
+      background: black;
+      outline: none;
+      text-align: center;
+      color: white;
+      transition: ease 1s;
+      font-family: 'poppins', sans-serif;
+      }
+      #teens::placeholder {
+      color: white;
+      text-align: center;
+      transition: ease 1s;
+      }
+      #audio {
+        display: none;
+      }
+    </style>
+</head>
+
+<body onclick="aud()">
+<div id="main"></div>
+<h4>BMI Calculator</h4>
+  <input type="number" placeholder="Weight in KG" id="txt" onmouseover="up()"><br><br>
+  
+  <input type="number" placeholder="Height in CM" id="num" onmouseover="up()"><br><br><br>
+  
+  
+  <button type="submit" id="btn" onclick="show()">Calculate</button><br><br>
+  
+  <button type="submit" id="btn" onclick="hide()">Clear</button><br><br><br>
+  <div id="hr"></div><br><br>
+  
+<input type="number" id="demo" placeholder="Your BMI here..." readonly><br><br>
+
+<input type="text" id="teens" placeholder="Hover me to show category" readonly onmouseover="see()">
+<audio controls id="audio">
+  <source src = "https://dl.dropbox.com/s/44bnk4fnjb6qxbl/Warriyo%20-%20Mortals%20%28feat.%20Laura%20Brehm%29%20%5BNCS%20Release%5D.mp3?dl=0">
+</audio>
+  
+  <script>
+    swal({
+    title: "BMI calculator project version 1.0",
+    text: "Hello viewers, this is the small effort from my side by making this project. This is the first version of this project. Other functional features added in version 2.0⚡. Now then enjoy this project by using all the features🙏🔥 ",
+    icon: "success",
+    button: "OK"})
+  </script>
+  
+  
+<script>
+  function show() {
+    var a = parseInt(document.getElementById("txt").value);
+    var b = parseInt(document.getElementById("num").value);
+    
+    
+    let bmi = document.getElementById("demo").value = (a / ((b * b) / 10000)).toFixed(2); 
+    
+    document.getElementById("demo").style.backgroundColor = "white";
+    document.getElementById("demo").style.border = "3px solid black";
+    document.getElementById("demo").style.color = "black";
+    
+    if (bmi < 18.5) {
+      document.getElementById("teens").value = "Underweight";
+      
+    }
+    else if (bmi >= 18.5 && bmi <= 25)
+    {
+        document.getElementById("teens").value = "Healthy weight";
+    }
+    else if (bmi > 25 && bmi <= 30)
+    {
+        document.getElementById("teens").value = "Overweight";
+    }
+    else if (bmi > 30 && bmi <= 35)
+    {
+        document.getElementById("teens").value = "Obese Class 1";
+    }
+    else if(bmi > 35 && bmi <= 40)
+    {
+        document.getElementById("teens").value = "Obese Class 2";
+    }
+    else if (bmi > 40) {
+      document.getElementById("teens").value = "Obese Class 3";
+    }
+    else
+    {
+        swal({
+        title: "Value should not be blank",
+        text: "Please fill the value. HEIGHT and WEIGHT should not be blank🙏",
+          icon: "error",
+          button: "OK"})
+        document.getElementById("demo").style.backgroundColor = "black";
+        document.getElementById("demo").style.border = "3px solid black";
+        document.getElementById("demo").style.color = "white";
+    }
+    
+  }
+  function hide() {
+    document.getElementById("txt").value = "";
+    document.getElementById("num").value = "";
+    document.getElementById("demo").value = "";
+    document.getElementById("teens").value = "";
+    document.getElementById("demo").style.backgroundColor = "black";
+    document.getElementById("demo").style.border = "3px solid black";
+    document.getElementById("demo").style.color = "white";
+    
+  }
+  function see() {
+   swal({
+    title: "Given Category",
+    text: "|𝐔𝐧𝐝𝐞𝐫𝐰𝐞𝐢𝐠𝐡𝐭 - <18.5 kg/m²|, |𝐇𝐞𝐚𝐥𝐭𝐡𝐲 𝐰𝐞𝐢𝐠𝐡𝐭 - 18.5kg/m²- 25kg/m²|, |𝐎𝐯𝐞𝐫𝐰𝐞𝐢𝐠𝐡𝐭 - 25kg/m²- 30kg/m²|, |𝐎𝐛𝐞𝐬𝐞 𝐜𝐥𝐚𝐬𝐬 𝟏 - 30kg/m²- 35kg/m²|, |𝐎𝐛𝐞𝐬𝐞 𝐜𝐥𝐚𝐬𝐬 𝟐 - 35kg/m²- 40kg/m²|, |𝐎𝐛𝐞𝐬𝐞 𝐜𝐥𝐚𝐬𝐬 𝟑 - >40kg/m²|",
+    icon: "success",
+    button: "Continue"})
+  }
+  function up() {
+    document.getElementById("demo").style.backgroundColor = "black";
+    document.getElementById("demo").style.border = "3px solid black";
+    document.getElementById("demo").style.color = "white";
+    document.getElementById("demo").value = "";
+    document.getElementById("teens").value = "";
+  }
+  function aud() {
+    var a = document.getElementById("audio");
+    a.play();
+    
+  }
+  
+</script>
+
+
+
+
+
+
+</body>
+
+</html>
