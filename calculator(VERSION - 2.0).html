@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+    body {
+      background: url(https://dl.dropbox.com/s/gd2aktekvsce22q/f4c3549f4aaaecee854cbddf44c0ac77.jpg?dl=0);
+      background-size: cover;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+      .btn {
+      width: 120px;
+      margin-top: 20px;
+      height: 40px;
+      background-color: white;
+      margin-left: 35px;
+      outline: none;
+      border-radius: 50px;
+      font-size: 14px;
+      color: black;
+      font-weight: bold;
+      border: solid white;
+      font-family: 'Poppins', sans-serif;
+      background-color: white;
+      text-indent: -2px;
+      transition: ease-in-out 1s;
+      }
+      .btn:hover {
+        transition: ease-in-out 1s;
+        border-radius: 5px;
+        background-color: transparent;
+        color: white;
+      }
+      #button {
+        margin-left: -1px;
+        margin-left: 20px;
+      }
+      #or {
+      color: yellow;
+      margin-left: 155px;
+      margin-top: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bolder;
+      font-size: 15px;
+      transition: ease-in-out 0.3s;
+      }
+      .bten {
+      width: 120px;
+      margin-top: -250px;
+      height: 40px;
+      background-color: white;
+      margin-left: 35px;
+      outline: none;
+      border-radius: 50px;
+      font-size: 15px;
+      color: black;
+      font-weight: bold;
+      border: solid white;
+      font-family: 'Poppins', sans-serif;
+      background-color: white;
+      text-indent: -2px;
+      transition: ease-in-out 1s;
+      }
+      .bten:hover {
+        transition: ease-in-out 1s;
+        border-radius: 5px;
+        background-color: transparent;
+        color: white;
+      }
+      #main {
+        width: 320px;
+        height: 500px;
+        border: 4px solid white;
+        margin-left: 10px;
+        display: none;
+        margin-top: -1px;
+        border-radius: 10px;
+        transition: ease-in-out 1s;
+        background: url(https://dl.dropbox.com/s/qkjlh1p8lqlc0q7/1fe6e97a32d1a48bf489e2ee602fda32.jpg?dl=0);
+        background-size: cover;
+        animation: fade ease 3s;
+      }
+      @keyframes fade {
+      0% {
+        opacity:0;
+        transform:translateX(-200px);
+        
+      }
+      100% {
+        opacity:1;
+        transform:translateX(0);
+      }
+      }
+      #heading {
+      margin-left: 20px;
+      color: white;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 15px;
+      font-size: 29px;
+      }
+      hr {
+        width: 319px;
+        margin-left: -2px; 
+        margin-top: -12px;
+        border: 1.5px solid white;
+      }
+      .ans {
+      margin-left: 25px;
+      margin-top: 90px;
+      margin-top: 1px;
+      position: absolute;
+      width: 260px;
+      height: 35px;
+      border: 3px solid white;
+      border-radius: 50px;
+      outline: none;
+      background-color: transparent;
+      text-indent: 9px;
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      transition: ease-in-out 1s;
+      font-family: 'Poppins', sans-serif;
+      }
+      .ans::placeholder {
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        text-indent: 9px;
+       text-align: center;
+       transition: ease-in-out 1s;
+      }
+      .txt {
+      margin-left: 28px;
+      margin-top: 5px;
+      width: 255px;
+      height: 35px;
+      border: 3px solid white;
+      border-radius: 50px;
+      outline: none;
+      background-color: transparent;
+      text-indent: 20px;
+      font-size: 15px;
+      color: white;
+      transition: ease-in-out 1s;
+      font-family: 'Poppins', sans-serif;
+      
+    }
+    .txt:hover {
+      border-radius: 2px;
+      transition: ease-in-out 1s;
+    }
+    .txt::placeholder {
+      text-indent: 20px;
+      font-size: 15px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      
+    }
+    .op {
+      margin-left: 28px;
+      margin-top: 5px;
+      width: 255px;
+      height: 35px;
+      transition: ease-in-out 1s;
+      border: 3px solid white;
+      border-radius: 50px;
+      outline: none;
+      background-color: transparent;
+      text-indent: 20px;
+      font-size: 15px;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+    .op:hover {
+      border-radius: 2px;
+      transition: ease-in-out 1s;
+    }
+    .op::placeholder {
+    text-indent: 20px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    }
+    .mybtn {
+     width: 155px;
+     height: 45px;
+     margin-top: 25px;
+     background-color: white;
+     margin-left: 83px;
+     outline: none;
+     border-radius: 50px;
+     font-size: 18px;
+     color: black;
+     font-weight: bold;
+     border: solid white;
+     font-family: 'Poppins', sans-serif;
+     background-color: white;
+     text-indent: -2px;
+     transition: ease-in-out 0.3s;
+    }
+    .mybtn:hover {
+      border: 2px solid;
+      background-color: transparent;
+      color: white;
+      transition: ease-in-out 0.3s;
+      border-radius: 5px;
+      
+
+    }
+    #wrapper {
+      animation: fadeIn ease 10s;
+    }
+    @keyframes fadeIn {
+    0% {
+      opacity:0;
+      transform: translateY(-200px);
+    }
+    100% {
+      opacity:1;
+      transform: translateY(0px);
+    }
+    }
+    .git {
+      width: 30px;
+      height: 30px;
+      margin-left: 184px;
+      margin-top: -74px;
+      position: absolute;
+      overflow: hidden;
+      transition: ease-in-out 1s;
+    }
+    .ig {
+      width: 38px;
+      height: 38px;
+      margin-left: 225px;
+      margin-top: -77px;
+      position: absolute;
+      overflow: hidden;
+      transition: ease-in-out 1s;
+    }
+    .fb {
+      width: 30px;
+      height: 30px;
+      margin-left: 270px;
+      margin-top: -74px;
+      position: absolute;
+      overflow: hidden;
+      transition: ease-in-out 1s;
+    }
+    #images {
+      display: none;
+      transition: ease-in-out 2s;
+      animation: fade ease 2s;
+    }
+    #btny {
+      margin-left: 179px;
+      margin-top: -40px;
+      position: absolute;
+      width: 130px;
+      transition: ease-in-out 1s;
+      
+    }
+    #btny:hover {
+     border: 2px solid;
+     background-color: transparent;
+     color: white;
+     transition: ease-in-out 1s;
+     border-radius: 5px; 
+    }
+    #new {
+      display: block;
+      margin-top: -2px;
+      margin-top: 9px;
+      transition: ease-in-out 1s;
+    }
+    #audio {
+      display: none;
+    }
+    
+    </style>
+</head>
+
+<body onclick="play()">
+  <div id="wrapper">
+<button type="submit" class="btn" id="bttn" onclick="show()">Show Calculator</button>
+<button type="submit" class="btn" id="button" onclick="hide()">Hide Calculator</button>
+<div id="or">OR</div><br>
+
+<button type="submit" class="bten" id="buton" onclick="see()">See credit</button><br>
+
+<button type="submit" class="bten" id="btny" onclick="social()"><p id="new">Social Account</p></button>
+</div><br><br>
+<div id="images">
+  <a href="https://github.com/yuvraj-07"><img class="git" src="https://dl.dropbox.com/s/0ph6th9mo8mru3v/733609.png?dl=0"></a>
+  
+  <a href="https://instagram.com/__yuvraj01?igshid=odhr4xea2jvq"><img class="ig" src="https://dl.dropbox.com/s/bqcfp49beqi5znn/instagram-logo-png-transparent-0.png?dl=0"></a>
+  
+  <a href="https://www.facebook.com/profile.php?id=100010656091936"><img class="fb" src="https://dl.dropbox.com/s/tld4xzs3z5vj5xi/facebook.png?dl=0"></a>
+</div>
+
+
+
+<div id="main">
+<p id="heading">Basic Calculator - 2.0</p><hr><br><br>
+<div class="animate__animated animate__backInUp animate__slow	290ms">  
+  <input type="number" class="ans" id="answer" placeholder="Total Answer"><br><br><br><br><br>
+  
+<input type="number" placeholder="Your First Number" class="txt" id="txt" name="text"><br><br>
+
+<input type="number" placeholder="Your Second Number" class="txt" id="txt1" name="text1"><br><br>
+
+<input type="text" placeholder="Choose  operator(+, -, *, /, %, or C)" class="op" name="operate" id="operator"><br>
+<button type="submit" class="mybtn" onclick="valid()">Calculate</button><br><br>
+</div>
+
+</div>
+<audio controls id="audio">
+  <source src="https://dl.dropbox.com/s/0lc55famo1cotun/audio%286%29.mp3?dl=0" type="audio/mp3">
+  <source src="https://dl.dropbox.com/s/0lc55famo1cotun/audio%286%29.mp3?dl=0" type="audio/mpeg">
+</audio>
+<script>
+  swal({
+  title: "𝗕𝗮𝘀𝗶𝗰 𝗖𝗮𝗹𝗰𝘂𝗹𝗮𝘁𝗼𝗿 - ➋.⓿",
+  text: "So This is the basic Calculator version - ➋.⓿ with some improved features and Modifications in it.   I added some operator in it also and upcoming time i add more operator if possible.😊 Now then enjoy 🥳🥳🥳 𝗥𝗲𝗰𝗼𝗺𝗺𝗲𝗻𝗱𝗮𝘁𝗶𝗼𝗻 - Use all Operators to see effects...🙏",
+  icon: "success",
+  button: "Continue"})
+</script>
+<script>
+function see() {
+  swal({
+  title: "𝖢𝗈𝖽𝖾 𝖢𝗋𝖾𝖽𝗂𝗍𝖾𝖽 𝖳𝗈 - ✖‿✖ ℽႮᏉℛᗅℐ ՏⅈℕᏀℍ ✖‿✖",
+  text: "This code is especially created my me😊 as a project based. And also i learnt something new from this project. Hopefully You guys enjoying this project alot.🥰🔥🙏",
+  icon: "success",
+  button: "Ok"})
+}
+function play() {
+  var j = document.getElementById("audio");
+  j.play();
+}
+  function valid() {
+    var txt = parseFloat(document.getElementById("txt").value);
+    var txt1 = parseFloat(document.getElementById("txt1").value);
+    var operator = document.getElementById("operator").value;
+    if (operator == "+") {
+      document.getElementById("answer").value = txt + txt1;
+      document.getElementById("main").style.backgroundImage = "url(https://dl.dropbox.com/s/3n1hsvhu9e5ud4j/f3ac03bc63a93e9e80846fd292acd3bc.jpg?dl=0)";
+      document.getElementById("main").style.backgroundSize = "cover";
+      document.getElementById("main").style.backgroundImage.transition = "ease-in-out 1s";
+      document.getElementById("answer").style.borderRadius = "5px";
+      document.getElementById("answer").style.borderRadius.transition = "ease-in-out 1s";
+    }
+    else if (operator == "-") {
+      document.getElementById("answer").value = txt - txt1;
+      document.getElementById("main").style.backgroundImage = "url(https://dl.dropbox.com/s/555dhly1tasmrwh/03884158bc638754106a75104a3c9622.jpg?dl=0)";
+      document.getElementById("main").style.backgroundSize = "cover";
+      document.getElementById("main").style.backgroundImage.transition = "ease-in-out 1s";
+      document.getElementById("answer").style.borderRadius = "5px";
+      document.getElementById("answer").style.borderRadius.transition = "ease-in-out 1s";
+      
+    }
+    else if (operator == "*") {
+      document.getElementById("answer").value = txt * txt1;
+      document.getElementById("main").style.backgroundImage = "url(https://dl.dropbox.com/s/kbkxo0u80kc0997/36c7e4595f4a9fe932fec476ff23f748.jpg?dl=0)";
+      document.getElementById("main").style.backgroundSize = "cover";
+      document.getElementById("main").style.backgroundImage.transition = "ease-in-out 1s";
+      document.getElementById("answer").style.borderRadius = "5px";
+      document.getElementById("answer").style.borderRadius.transition = "ease-in-out 1s";
+    }
+    else if (operator == "/") {
+    document.getElementById("answer").value = txt / txt1;
+    document.getElementById("main").style.backgroundImage = "url(https://dl.dropbox.com/s/637t09kcrn5dsq2/1a8f2f35169a1a10e711e58e744b7f46.jpg?dl=0)";
+    document.getElementById("main").style.backgroundSize = "cover";
+    document.getElementById("main").style.backgroundImage.transition = "ease-in-out 1s";
+    document.getElementById("answer").style.borderRadius = "5px";
+    document.getElementById("answer").style.borderRadius.transition = "ease-in-out 1s";
+    }
+    else if (operator == "%") {
+    document.getElementById("answer").value = txt/100 * txt1;
+    document.getElementById("answer").value = txt/100;
+    document.getElementById("main").style.backgroundImage = "url(https://dl.dropbox.com/s/14ofss2dn9htee5/a6be68a5112ae350071e70d890857138.jpg?dl=0)";
+    document.getElementById("main").style.backgroundSize = "cover";
+    document.getElementById("main").style.backgroundImage.transition = "ease-in-out 1s";
+    document.getElementById("answer").style.borderRadius = "5px";
+    document.getElementById("answer").style.borderRadius.transition = "ease-in-out 1s";
+    }
+    else if (operator == "C") {
+    document.getElementById("answer").value = "";
+    document.getElementById("main").style.backgroundImage = "url(https://dl.dropbox.com/s/qkjlh1p8lqlc0q7/1fe6e97a32d1a48bf489e2ee602fda32.jpg?dl=0)";
+    document.getElementById("txt").value = "";
+    document.getElementById("txt1").value = "";
+    document.getElementById("main").style.backgroundSize = "cover";
+    document.getElementById("main").style.backgroundImage.transition = "ease-in-out 1s";
+    document.getElementById("answer").style.borderRadius = "50px";
+    document.getElementById("answer").style.borderRadius.transition = "ease-in-out 1s";
+    }
+    else if (operator == "") {
+      swal({
+      title: "Choose Operator",
+      text: "Please choose operator from given operators🙏",
+      icon: "error",
+      button: "Ok"})
+    }
+    else {
+      swal({
+      title: "Wrong operator",
+      text: "Hey Buddy, you have choosen wrong operator... Please choose correct operator from below🙏",
+      icon: "error",
+      button: "Ok"})
+    }
+  }
+  function show() {
+   var a = document.getElementById("main");
+   if (a.style.display == "none") {
+     a.style.display = "block";
+     a.style.transition = "ease-in-out 1s";
+     swal({
+     title: "Calculator Opened",
+     text: "Hey Buddy, Your calculator has been Opened. Now you can use it..",
+     icon: "success",
+     button: "Continue"})
+     
+     
+   }
+   else if (a.style.display = "block") {
+     a.style.display = "none";
+   swal({
+   title: "Twice Clicking Needed",
+   text: "Hey Buddy, please click once more on this button and your calculator is infront of you..🙏 THANK YOU",
+   icon: "info",
+   button: "Ok"})
+   }
+  }
+  function hide() {
+    var b = document.getElementById("main");
+    if (b.style.display == "block") {
+      b.style.display = "none";
+      b.style.transition = "ease-in-out 1s";
+      b.classList.add('animate__animated', 'animate__bounceOutLeft');
+      swal({
+      title: "Calculator Closed",
+      text: "Hey Buddy, Now your calculator has been Closed. Thanks for using me..",
+      icon: "success",
+      button: "Continue"})
+    }
+    else {
+      swal({
+      title: "First Open Calculator",
+      text: "Hey Buddy, Please open calculator and then after close it otherwise it will not working..🙏 ",
+      icon: "error",
+      button: "Ok"})
+    }
+  }
+  function social() {
+  var s = document.getElementById("new");
+  
+  if (s.style.display == "block") {
+    s.style.display = "none";
+    document.getElementById("images").style.display = "block";
+    document.getElementById("images").style.transition = "ease-in-out 2s";
+    swal({
+    title: "Social Account Handle",
+    text: "Hey, Here is my three main social media account - Github, Instagram, Facebook.. ",
+    icon: "success",
+    button: "Ok"})
+    }
+    
+  else {
+  s.style.display = "block";
+  document.getElementById("images").style.display = "none";
+  document.getElementById("images").style.transition = "ease-in-out 2s";
+  swal({
+  title: "Twice Clicking Needed",
+  text: "Hey Buddy, please click once more on this button and your calculator is infront of you..🙏 THANK YOU",
+  icon: "info",
+  button: "Ok"})
+  }
+  }
+</script>
+</body>
+
+</html>
